@@ -1,0 +1,9 @@
+body {
+    margin: 0; /* デフォルトのマージンをゼロに設定 */
+    padding: 0; /* デフォルトのパディングをゼロに設定 */
+    width: 100%; /* ビューポートの幅を100%に設定 */
+    height: 100%; /* ビューポートの高さを100%に設定 */
+    overflow-x: hidden; /* 横方向のオーバーフローを隠す */
+    font-family: "Hiragino Kaku Gothic ProN W3";
+    box-sizing: border-box;
+}
