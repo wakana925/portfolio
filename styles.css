@@ -7,3 +7,37 @@ body {
     font-family: "Hiragino Kaku Gothic ProN W3";
     box-sizing: border-box;
 }
+
+.image-container1 {
+    position: relative;
+    width: 300px; /* 画像の幅に合わせて調整 */
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒いオーバーレイ */
+    color: #d36e7a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    font-size: 20px; /* 文字の大きさを調整 */
+}
