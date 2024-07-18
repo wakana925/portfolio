@@ -11,12 +11,20 @@ body {
 }
 
 .menu {
-    background-color: #ffffff; /* メニューの背景色 */
-    border-radius: 15px; /* 角を丸くする */
-    margin-top: 30px;
+    position: absolute;
+    top: 6%; /* 上から50%の位置に設定 */
+    left: 50%; /* 左から50%の位置に設定 */
+    transform: translate(-50%, -50%); /* 自身の幅と高さの50%を引いて中央揃え */
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #f9d3da; /* メニューの背景色 */
+    border-radius: 20px; /* 角を丸くする */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-width: 80%; /* 最大幅を設定して中央に配置 */
+    width: 350px; /* 固定幅を設定（必要に応じて調整） */
+    padding: 10px 10px;
     gap: 10px; /* メニュー項目の間隔 */
 }
 
@@ -24,8 +32,76 @@ body {
     text-decoration: none; /* リンクの下線を消す */
     color: #d36e7a; /* リンクの色（任意で変更） */
     padding: 5px 10px; /* リンクの内側の余白 */
-    border-radius: 5px; /* リンクの角を丸くする（任意） */
-    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+.menu img {
+    width: 30px; /* アイコンの幅を調整（小さくする） */
+    height: 30px; /* アイコンの高さを調整（小さくする） */
+}
+
+header {
+    text-align: center;
+    padding-top: 140px;
+}
+
+header img {
+    width: 1100px;
+    height: 480px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 40px; /* 角を丸くする */
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    font-size: 100px; /* 文字サイズを設定 */
+    padding: 10px 20px;
+    border-radius: 10px; /* 文字背景の角を丸くする */
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+}
+
+.Plofile {
+    position: relative;
+    background-color: #f9d3da;
+    border-radius: 40px;
+    width: 1065px; /* 適宜調整 */
+    height: 300px;
+    margin: 0 auto; /* 中央に配置 */
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.profile-title {
+    position: absolute;
+    font-size: 30px;
+    top: -90px; /* 見栄えを調整 */
+    left: 0; /* 見栄えを調整 */
+    padding: 0 5px;
+}
+
+.Plofile .name {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Profile タイトルとの間隔を調整 */
+}
+
+.Plofile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.Plofile p {
+    margin: 5px 0;
 }
 
 .image-container {
