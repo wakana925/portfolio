@@ -72,8 +72,8 @@ header img {
     position: relative;
     background-color: #f9d3da;
     border-radius: 40px;
-    width: 1065px; /* 適宜調整 */
-    height: 300px;
+    width: 600px; /* 適宜調整 */
+    height: 400px;
     margin: 0 auto; /* 中央に配置 */
     margin-top: 100px;
     padding: 20px;
@@ -85,24 +85,58 @@ header img {
     top: -90px; /* 見栄えを調整 */
     left: 0; /* 見栄えを調整 */
     padding: 0 5px;
+    text-decoration: underline;
 }
 
-.Plofile .name {
-    display: flex;
-    align-items: center;
-    margin-top: 20px; /* Profile タイトルとの間隔を調整 */
+.name-ja {
+    margin: 0; /* デフォルトのマージンをリセット */
+    padding: 0; /* デフォルトのパディングをリセット */
+}
+
+.name-ja h4 {
+    margin: 10px 0 5px 38px; /* 上、右、下、左のマージンを設定 */
+    font-size: 40px; /* フォントサイズの設定 */
+}
+
+.name-en {
+    margin-top: 0; /* 上のマージンをゼロに設定 */
+    margin-bottom: 0; /* 下のマージンをゼロに設定 */
+    font-size: 16px; /* フォントサイズの設定 */
+    margin-left: 45px; /* 左のマージンを設定 */
 }
 
 .Plofile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 5px;
+        width: 190px; /* 元の50pxから100pxに拡大 */
+        height: 190px; /* 元の50pxから100pxに拡大 */
+        border-radius: 50%;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+.info{
+    margin-left: 310px;
+    margin-top: -270px;
+    font-size: 24px;
+    line-height: 3; /* 行間を調整 */
 }
 
-.Plofile p {
-    margin: 5px 0;
+.Skills{
+    margin-top: 250px;
+    background-color: #f9d3da;
+    border-radius: 40px;
+    width: 600px; /* 適宜調整 */
+    height: 400px;
+    margin-left: 400px;
 }
+
+.Skills h3 {
+    margin: 0 auto; /* 見出しの上下のマージンをゼロにし、中央に配置 */
+    padding-top: 100px;
+    font-size: 40px; /* フォントサイズを設定（必要に応じて調整） */
+    margin-left: 0;
+    text-decoration: underline;
+}
+
 
 .image-container {
     position: relative;
