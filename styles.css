@@ -157,7 +157,8 @@ header img {
     display: flex;
     align-items: center;
     width: 45%; /* 横に二つ並べるための幅調整 */
-    margin: 10px 0;
+    margin-top: 45px;
+    margin-left: 30px;
 }
 
 .skills-item img {
@@ -169,28 +170,48 @@ header img {
 .skills-item p {
     margin: 0;
     font-size: 25px;
-    color: #C66;
+    color: #d36e7a;
+}
+
+.work-img {
+    display: grid;
+    justify-content: center; /* 水平中央 */
+    padding-left: 40px;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    grid-template-columns: repeat(3, 230px); /* 2列の固定レイアウト */
+    gap: 60px; /* アイテム間のスペース */
 }
 
 .image-container {
     position: relative;
-    width: 100px; /* 画像の幅に合わせて調整 */
+    width: 200px; /* 正方形のサイズを設定。必要に応じて調整 */
+    height: 200px; /* 幅と高さを同じにして正方形を維持 */
+    overflow: hidden; /* はみ出した部分を隠す */
+    border-radius: 40px; /* 角を丸くする（値は調整可能） */
 }
 
-.image-container img {
+.image-container img, 
+.image-container video {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* 画像や動画を要素に合わせてトリミング */
     display: block;
 }
 
-.image-container1 .overlay1 {
+.image-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒いオーバーレイ */
-    color: #d36e7a;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,10 +219,33 @@ header img {
     transition: opacity 0.2s ease;
 }
 
-.image-container1:hover .overlay1 {
+.image-container1:hover .overlay, 
+.image-container5:hover .overlay, 
+.image-container6:hover .overlay,
+.image-container2:hover .overlay, 
+.image-container3:hover .overlay, 
+.image-container4:hover .overlay {
     opacity: 1;
+    background-color: rgba(249, 211, 218, 0.5); /* ホバー時に半透明の背景にする*/
 }
 
-.text {
-    font-size: 20px; /* 文字の大きさを調整 */
+.work-text{
+    font-size: 35px; /* 文字の大きさを調整 */
+    font-weight: bold;
+    color: #fff; /* 文字の色を設定 */
+    font-style: italic; /* 斜体にする */
+    padding-left: 100px;
+    padding-top: 130px;
+}
+
+.footer-content{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #F4C0CA;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 120px; 
+    border-top-left-radius: 50px; /* 左上の角を丸く */
+    border-top-right-radius: 50px; /* 右上の角を丸く */
 }
