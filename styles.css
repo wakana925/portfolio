@@ -119,25 +119,58 @@ header img {
     font-size: 24px;
     line-height: 3; /* 行間を調整 */
 }
-
-.Skills{
-    margin-top: 250px;
-    left: 200px;
-    background-color: #f9d3da;
-    border-radius: 40px;
-    width: 600px; /* 適宜調整 */
-    height: 400px;
-    margin-left: 400px;
+.Skills {
+    text-align: center;
+    margin-top: 100px;
 }
 
-.Skills h3 {
-    margin: 0 auto; /* 見出しの上下のマージンをゼロにし、中央に配置 */
-    padding-top: 100px;
-    font-size: 40px; /* フォントサイズを設定（必要に応じて調整） */
-    margin-left: 0;
+.Skills-text {
+    font-size: 30px; /* フォントサイズを設定（必要に応じて調整） */
+    margin-left: -550px;
+    margin-bottom: -36px; 
     text-decoration: underline;
 }
 
+.Skills-background {
+    background-color: #f9d3da;
+    border-radius: 40px;
+    width: 600px;
+    height: 400px;
+    padding-top: 0;
+    margin: auto;
+    padding: 20px; /* 内側の余白を追加 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* スキルコンテナ */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  width: 100%;
+}
+
+/* スキルアイテム */
+.skills-item {
+    display: flex;
+    align-items: center;
+    width: 45%; /* 横に二つ並べるための幅調整 */
+    margin: 10px 0;
+}
+
+.skills-item img {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.skills-item p {
+    margin: 0;
+    font-size: 25px;
+    color: #C66;
+}
 
 .image-container {
     position: relative;
