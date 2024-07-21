@@ -1,14 +1,27 @@
 body {
-    margin: 0; /* デフォルトのマージンをゼロに設定 */
-    padding: 0; /* デフォルトのパディングをゼロに設定 */
-    width: 100%; /* ビューポートの幅を100%に設定 */
-    height: 100%; /* ビューポートの高さを100%に設定 */
-    overflow-x: hidden; /* 横方向のオーバーフローを隠す */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
     font-family: "Hiragino Kaku Gothic ProN W3";
     box-sizing: border-box;
     background-color: #fce0e5;
     color: #d36e7a;
 }
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* スクロールで表示される状態 */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .menu {
     position: absolute;
@@ -54,7 +67,7 @@ header img {
 
 .header-text {
     position: absolute;
-    top: 50%;
+    top: 200px;
     left: 50%;
     transform: translate(-50%, -65%);
     font-size: 100px; /* 文字サイズを設定 */
@@ -248,4 +261,37 @@ header img {
     height: 120px; 
     border-top-left-radius: 50px; /* 左上の角を丸く */
     border-top-right-radius: 50px; /* 右上の角を丸く */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column; /* 垂直方向に要素を並べる */
+    align-items: center; /* 中央揃え */
+    justify-content: center;
+    background-color: #F4C0CA;
+    padding-top: 60px;
+    height: 120px; 
+    border-top-left-radius: 20px; /* 左上の角を丸く */
+    border-top-right-radius: 20px; /* 右上の角を丸く */
+}
+
+.footer-socials {
+    margin-top: 10px; /* 上に少し余白を追加 */
+}
+
+.footer-socials a {
+    text-decoration: none; /* リンクの下線を消す */
+    margin: 0 10px; /* アイコン間の余白を設定 */
+}
+
+
+.footer-content p{
+    font-size: 20px;
+    margin: 0;
+}
+
+.footer-socials img {
+    padding-top: 20px;
+    width: 24px; /* アイコンの幅を設定 */
+    height: 24px; /* アイコンの高さを設定 */
 }
