@@ -23,7 +23,7 @@
     </div>
 
     <header>
-        <div class="header-container">
+        <div class="fade-in">
             <img src="hedder.JPG" alt="hedder-img" class="header-img">
             <h1 class="header-text">portfolio</h1>
         </div>
@@ -154,8 +154,41 @@
         <footer>
             <div class="footer-content">
                 <p>Ⓒ 2024 塩口和香奈. Portfolio.</p>
+                <div class="footer-socials">
+                    <a href="https://twitter.com/zooa_oblz" target="_blank">
+                        <img src="icons8-ツイッターx-48.png" alt="Twitter">
+                    </a>
+                    <a href="https://www.instagram.com/_waka_nan?igsh=MXZrM2g2aXI5N3c1dQ%3D%3D&utm_source=qr" target="_blank">
+                        <img src="icons8-インスタグラム-48.png" alt="Instagram">
+                    </a>
+                    <a href="https://github.com/wakana925" target="_blank">
+                        <img src="icons8-github-60.png" alt="GitHub">
+                    </a>
+                </div>
             </div>
         </footer>
-    <script src="script.js"></script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fade-in');
+
+    function checkVisibility() {
+        const triggerBottom = window.innerHeight * 0.8;
+
+        elements.forEach(element => {
+            const boxTop = element.getBoundingClientRect().top;
+
+            if (boxTop < triggerBottom) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // 初期チェック
+});
+        </script>
 </body>
 </html>
