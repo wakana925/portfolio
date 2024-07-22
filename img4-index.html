@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>image1</title>
-    <link rel="stylesheet-img" href="styles-img.css">
+    <title>image4</title>
+    <link rel="stylesheet" href="styles-img4.css">
 </head>
 <body>
+    <div class="background">
+        <div class="image-container">
+            <div class="image-wrapper">
     <img src="04_html.png" alt="image4">
+            </div>
+        </div>
     <h3>作成にかかった時間:12時間</h3>
     <p>この作品はアイドルの方の誕生日イベントに向けて制作したポスターです。
         彼女のメンバーカラーを使用し、”彼女らしさ”を全面に押し出した作品に仕上がりました。
         また、彼女の自然な笑顔を生かしたデザインになるように作成しました。</p>
+    </div>
+    <script>
+        window.addEventListener('load', () => {
+             const background = document.querySelector('.background');
+             // ページが完全にロードされた後にアニメーションを適用
+             background.style.animation = 'fadeInScale 1s ease-out forwards';
+         });
+     </script>
 </body>
 </html>
