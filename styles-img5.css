@@ -66,6 +66,22 @@ p{
     margin-right: 50px;
 }
 
+#close-btn {
+    margin-top: 20px; /* 上にスペースを追加 */
+    padding: 10px 20px;
+    background-color: #d36e7a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#close-btn:hover {
+    background-color: #b04b5f;
+}
+
 @keyframes fadeInScale {
     from {
         opacity: 0;
@@ -74,5 +90,25 @@ p{
     to {
         opacity: 1;
         transform: scale(1);
+    }   
+}/* ページを閉じるときのアニメーション */
+@keyframes fadeOutScale {
+    from {
+        opacity: 1;
+        transform: scale(1);
     }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+
+/* アニメーションが適用された状態 */
+.fade-in {
+    animation: fadeInScale 1s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOutScale 1s ease-in forwards;
 }
