@@ -17,13 +17,34 @@
     <p>この作品はアイドルの方の誕生日イベントに向けて制作したポスターです。
         彼女のメンバーカラーを使用し、”彼女らしさ”を全面に押し出した作品に仕上がりました。
         また、彼女の自然な笑顔を生かしたデザインになるように作成しました。</p>
+        <button id="close-btn">back</button>
     </div>
     <script>
-        window.addEventListener('load', () => {
-             const background = document.querySelector('.background');
-             // ページが完全にロードされた後にアニメーションを適用
-             background.style.animation = 'fadeInScale 1s ease-out forwards';
-         });
+      // ページが完全にロードされたときのアニメーション
+   window.addEventListener('load', () => {
+            document.body.classList.add('fade-in');
+            
+            // ページを戻った際に「Work」セクションにスクロール
+            const scrollToWork = sessionStorage.getItem('scrollToWork');
+            if (scrollToWork === 'true') {
+                const workSection = document.getElementById('work');
+                if (workSection) {
+                    workSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                sessionStorage.removeItem('scrollToWork'); // スクロール後にフラグを削除
+            }
+        });
+
+        // 戻るボタンがクリックされたときのアニメーション
+        document.getElementById('close-btn').addEventListener('click', () => {
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+            // アニメーションが完了した後に指定したURLにリダイレクト
+            setTimeout(() => {
+                sessionStorage.setItem('scrollToWork', 'true'); // フラグを保存
+                window.location.href = 'index.html'; // リダイレクト先のURLに置き換えてください
+            }, 1000); // アニメーションの時間（1秒）と一致させる
+        });
      </script>
 </body>
 </html>
