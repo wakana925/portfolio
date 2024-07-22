@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>image1</title>
-    <link rel="stylesheet-img" href="styles-img.css">
+    <title>image2</title>
+    <link rel="stylesheet" href="styles-img2.css">
 </head>
 <body>
+    <div class="background">
+        <div class="image-container">
+            <div class="image-wrapper">
     <img src="02_html.png" alt="image2">
+</div>
+</div>
     <h3>作成にかかった時間:14時間</h3>
     <p>この作品は、ファッションサイトのセールプロモーション用に制作したポスターです。 パステルカラーを効果的に使用し、ファンタジックな雰囲気を醸し出すことができました。 モデルの印象的な表情がポスターに魅力的なアクセントを加え、全体の印象を引き立てています。</p>
+</div>
+<script>
+    window.addEventListener('load', () => {
+         const background = document.querySelector('.background');
+         // ページが完全にロードされた後にアニメーションを適用
+         background.style.animation = 'fadeInScale 1s ease-out forwards';
+     });
+ </script>
 </body>
 </html>
