@@ -3,14 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>image1</title>
-    <link rel="stylesheet-img" href="styles-img.css">
+    <title>image3</title>
+    <link rel="stylesheet" href="styles-img3.css">
 </head>
 <body>
+    <div class="background">
+        <div class="image-container">
+            <div class="image-wrapper">
     <img src="03_html.png" alt="image3">
+    </div>
+    </div>
     <h3>作成にかかった時間:18時間</h3>
     <p>この作品は、音楽フェスティバル向けに制作したポスターです。
         出演アーティストたちのようなエネルギッシュで華やかな雰囲気を効果的に表現することができました。
         鮮やかなカラーパレットを採用することで、フェスティバルの躍動感とエキサイティングな雰囲気を一層引き立て、イベントの魅力を瞬時に伝えられるよう工夫しました。</p>
+        </div>
 </body>
+<script>
+    window.addEventListener('load', () => {
+         const background = document.querySelector('.background');
+         // ページが完全にロードされた後にアニメーションを適用
+         background.style.animation = 'fadeInScale 1s ease-out forwards';
+     });
+ </script>
 </html>
