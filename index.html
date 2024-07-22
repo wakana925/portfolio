@@ -174,26 +174,40 @@
         </footer>
 
         <script>
-          document.addEventListener('DOMContentLoaded', function() {
-    const elements = document.querySelectorAll('.fade-in');
-
-    function checkVisibility() {
-        const triggerBottom = window.innerHeight * 0.8;
-
-        elements.forEach(element => {
-            const boxTop = element.getBoundingClientRect().top;
-
-            if (boxTop < triggerBottom) {
-                element.classList.add('visible');
-            } else {
-                element.classList.remove('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // 初期チェック
-});
-        </script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const elements = document.querySelectorAll('.fade-in');
+          
+              function checkVisibility() {
+                  const triggerBottom = window.innerHeight * 0.8;
+          
+                  elements.forEach(element => {
+                      const boxTop = element.getBoundingClientRect().top;
+          
+                      if (boxTop < triggerBottom) {
+                          element.classList.add('visible');
+                      } else {
+                          element.classList.remove('visible');
+                      }
+                  });
+              }
+          
+              window.addEventListener('scroll', checkVisibility);
+              checkVisibility(); // 初期チェック
+          
+              // ページが完全に読み込まれた際のスクロール処理
+              window.addEventListener('load', () => {
+                  // セッションストレージに保存された情報を基にスクロール
+                  const scrollToWork = sessionStorage.getItem('scrollToWork');
+                  if (scrollToWork === 'true') {
+                      const workSection = document.getElementById('work');
+                      if (workSection) {
+                          workSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                      sessionStorage.removeItem('scrollToWork'); // スクロール後にフラグを削除
+                  }
+              });
+            });
+          </script>
+          
 </body>
 </html>
