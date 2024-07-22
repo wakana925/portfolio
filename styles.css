@@ -295,3 +295,123 @@ header img {
     width: 24px; /* アイコンの幅を設定 */
     height: 24px; /* アイコンの高さを設定 */
 }
+
+/* モバイル表示用のスタイル */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* メニュー項目を縦に並べる */
+        width: 100%; /* メニューの幅を全画面に設定 */
+        max-width: none; /* 最大幅を無効にする */
+        padding: 15px; /* パディングを調整 */
+        gap: 5px; /* アイコン間のスペースを調整 */
+    }
+
+    .menu a {
+        font-size: 14px; /* リンクのフォントサイズを調整 */
+        padding: 10px; /* リンクの内側の余白を調整 */
+    }
+
+    .menu img {
+        width: 24px; /* アイコンの幅を調整 */
+        height: 24px; /* アイコンの高さを調整 */
+    }
+
+    header img {
+        width: 100%; /* ヘッダー画像を画面幅に合わせる */
+        height: auto; /* 高さは自動調整 */
+        border-radius: 20px; /* 角を丸くする */
+    }
+
+    .header-text {
+        font-size: 40px; /* ヘッダーの文字サイズを調整 */
+        top: 50%; /* テキストの位置を中央に */
+        transform: translate(-50%, -50%); /* 中央揃え */
+    }
+
+    .Plofile, .Skills-background {
+        width: 90%; /* コンテナの幅を調整 */
+        height: auto; /* 高さを自動調整 */
+    }
+
+    .Plofile {
+        padding: 10px;
+    }
+
+    .profile-title {
+        font-size: 24px; /* プロフィールタイトルのフォントサイズを調整 */
+        top: -60px; /* プロフィールタイトルの位置を調整 */
+    }
+
+    .name-ja h4 {
+        font-size: 30px; /* 名前のフォントサイズを調整 */
+    }
+
+    .name-en p {
+        font-size: 14px; /* 英語名のフォントサイズを調整 */
+    }
+
+    .info {
+        margin-left: 0; /* マージンをリセット */
+        margin-top: 20px; /* 上のマージンを調整 */
+        font-size: 18px; /* フォントサイズを調整 */
+    }
+
+    .Skills {
+        margin-top: 50px; /* マージンを調整 */
+    }
+
+    .Skills-text {
+        font-size: 24px; /* スキルタイトルのフォントサイズを調整 */
+        margin-left: 0; /* マージンをリセット */
+        margin-bottom: 20px; /* 下のマージンを調整 */
+    }
+
+    .skills-container {
+        flex-direction: column; /* スキルアイテムを縦に並べる */
+        align-items: center; /* アイテムを中央揃え */
+    }
+
+    .skills-item {
+        width: 80%; /* スキルアイテムの幅を調整 */
+        margin-top: 20px; /* 上のマージンを調整 */
+    }
+
+    .skills-item img {
+        width: 50px; /* アイコンの幅を調整 */
+        height: 50px; /* アイコンの高さを調整 */
+    }
+
+    .skills-item p {
+        font-size: 18px; /* スキル説明のフォントサイズを調整 */
+    }
+
+    .work-img {
+        grid-template-columns: 1fr; /* 1列にする */
+        padding-left: 0; /* 左のパディングをリセット */
+    }
+
+    .image-container {
+        width: 100%; /* 画像コンテナの幅を全画面にする */
+        height: auto; /* 高さを自動調整 */
+    }
+
+    .work-text {
+        font-size: 25px; /* ワークテキストのフォントサイズを調整 */
+        padding-left: 0; /* 左のパディングをリセット */
+        padding-top: 60px; /* 上のパディングを調整 */
+    }
+
+    .footer-content {
+        padding-top: 30px; /* 上のパディングを調整 */
+        padding-bottom: 30px; /* 下のパディングを調整 */
+        height: auto; /* 高さを自動調整 */
+        border-top-left-radius: 10px; /* 左上の角を丸く */
+        border-top-right-radius: 10px; /* 右上の角を丸く */
+    }
+
+    .footer-socials img {
+        width: 20px; /* ソーシャルアイコンの幅を調整 */
+        height: 20px; /* ソーシャルアイコンの高さを調整 */
+    }
+}
+
