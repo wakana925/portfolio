@@ -143,6 +143,8 @@ header img {
     margin-left: -550px;
     margin-bottom: -36px; 
     text-decoration: underline;
+    position: relative;
+    transform: none;
 }
 
 .Skills-background {
@@ -381,10 +383,11 @@ header img {
 
     .Skills-text {
         font-size: 20px; /* フォントサイズを設定（必要に応じて調整） */
-        top: 200px; /* 親要素の上からの位置を調整 */
+        margin-left: 20px; /* 左に寄せる */
+        text-decoration: underline;
+        position: relative;
         transform: none;
-        margin-right: 0; /* 右マージンをリセット */
-        padding-bottom: 8px;
+        text-align: left; /* 左揃えにする */
     }
 
     .Skills-background {
