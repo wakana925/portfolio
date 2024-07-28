@@ -18,7 +18,7 @@ body {
     background-color: #f9d3da;
     border-radius: 40px;
     width: 600px;
-    height: 670px;
+    height: 650px;
     margin: 100px auto 100px auto; /* 上に余白を追加し、左右中央揃え */
     padding: 20px; /* 内側の余白を追加 */
     display: flex;
@@ -111,4 +111,41 @@ p{
 
 .fade-out {
     animation: fadeOutScale 1s ease-in forwards;
+}
+
+/* モバイル表示用のスタイル */
+@media (max-width: 768px) {
+    .background {
+        width: 80%; /* 幅を90%に調整 */
+        height: auto; /* 高さを自動調整 */
+        margin: 50px auto; /* 上下のマージンを調整 */
+        padding: 30px; /* 内側の余白を減らす */
+    }
+
+    .image-container {
+        width: 100%; /* コンテナの幅を100%に */
+        padding-top: 20px; /* 上のパディングを減らす */
+    }
+
+    img {
+        width: 100%; /* 画像の幅を80%に */
+    }
+
+    h3 {
+        padding-top: 20px; /* 上のパディングを減らす */
+        margin-top: 10px; /* 上のマージンを減らす */
+        font-size: 24px; /* フォントサイズを調整 */
+    }
+
+    p {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 14px; /* フォントサイズを調整 */
+    }
+
+    #close-btn {
+        margin-top: 10px; /* 上のマージンを減らす */
+        padding: 8px 16px; /* パディングを減らす */
+        font-size: 14px; /* フォントサイズを調整 */
+    }
 }
