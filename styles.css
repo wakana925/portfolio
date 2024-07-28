@@ -196,8 +196,8 @@ header img {
     padding-left: 40px;
     padding-top: 100px;
     padding-bottom: 200px;
-    grid-template-columns: repeat(3, 230px); /* 2列の固定レイアウト */
-    gap: 60px; /* アイテム間のスペース */
+    grid-template-columns: repeat(4, 230px); /* 2列の固定レイアウト */
+    gap: 40px; /* アイテム間のスペース */
 }
 
 .image-container {
@@ -234,22 +234,20 @@ header img {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.2s ease;
+    background-color: rgba(249, 211, 218, 0.5); /* ホバー時に半透明の背景にする*/
 }
 
 .image-container1:hover .overlay, 
-.image-container5:hover .overlay, 
-.image-container6:hover .overlay,
 .image-container2:hover .overlay, 
 .image-container3:hover .overlay, 
 .image-container4:hover .overlay {
     opacity: 1;
-    background-color: rgba(249, 211, 218, 0.5); /* ホバー時に半透明の背景にする*/
 }
 
 .work-text{
     font-size: 35px; /* 文字の大きさを調整 */
     font-weight: bold;
-    color: #fff; /* 文字の色を設定 */
+    color: #D36E7F; /* 文字の色を設定 */
     font-style: italic; /* 斜体にする */
     padding-left: 100px;
     padding-top: 130px;
@@ -334,60 +332,68 @@ header img {
 
     .Plofile {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f9d3da;
+        border-radius: 40px;
+        width: 85%; /* 画面幅の90%に調整 */
+        margin: 0 auto;
+        margin-top: 50px;
+        height: auto; /* 高さを自動調整 */
     }
 
     #about h2 {
         text-align: center;
         font-size: 30px; /* 文字サイズを小さくする */
-        padding-top: 100px;
+        padding-top: 20px;
     }
 
     .profile-title {
         font-size: 20px; /* プロフィールタイトルのフォントサイズを調整 */
-        top: -55px; /* プロフィールタイトルの位置を調整 */
+        margin-top: 35px; /* プロフィールタイトルの位置を調整 */
     }
 
     .Plofile img {
         width: 170px; /* 元の50pxから100pxに拡大 */
         height: 170px; /* 元の50pxから100pxに拡大 */
-        margin-left: 200px;
-        margin-top: 40px;
+        border-radius: 50%;
+        margin: 20px auto; /* 上下にマージンを設定して中央に配置 */
     }
 
     .name-ja h4 {
-        padding-bottom: 0;
         font-size: 30px; /* 名前のフォントサイズを調整 */
         text-align: center;
-        margin-left: 0;
+        margin: 10px 0;
     }
     
-    .name-en p {
-        margin-left: -40px;
-        margin-bottom: 30px; /* 下のマージンをリセットしてh4との間隔を調整 */
-        font-size: 14px; /* 英語名のフォントサイズを調整 */
+    .name-en {
         text-align: center;
+        margin: 0; /* デフォルトのマージンをリセット */
+    }
+
+    .name-en p {
+        font-size: 14px; /* 英語名のフォントサイズを調整 */
+        margin: 5px 0 15px 0;
     }
 
     .info {
-        margin-left: 0; /* マージンをリセット */
-        margin-top: 20px; /* 上のマージンを調整 */
-        margin-bottom: 20px;
         font-size: 18px; /* フォントサイズを調整 */
-        line-height: 25px; /* 行間を詰める（値は調整可能） */
-        text-align: center
+        line-height: 25px; /* 行間を詰める */
+        text-align: center;
+        margin: 20px 0; /* 上下のマージンを調整 */
     }
 
     .Skills {
-        margin-top: 0px;
+        margin-top: 100px;
     }
 
     .Skills-text {
+        top: -10px;
         font-size: 20px; /* フォントサイズを設定（必要に応じて調整） */
-        margin-left: 20px; /* 左に寄せる */
-        text-decoration: underline;
-        position: relative;
-        transform: none;
+        margin-left: 35px; /* 左に寄せる */
         text-align: left; /* 左揃えにする */
+        z-index: 1;
     }
 
     .Skills-background {
@@ -405,14 +411,15 @@ header img {
     }
 
     .work-img {
-        grid-template-columns: 1fr; /* 1列にする */
-        padding-left: 0; /* 左のパディングをリセット */
+        grid-template-columns: repeat(2, 1fr); /* 1列にする */
+        padding: 0 100px;
+        padding-bottom: 100px;
     }
 
     .work-text {
         font-size: 25px; /* ワークテキストのフォントサイズを調整 */
+        padding-top: 30px;
         padding-left: 0; /* 左のパディングをリセット */
-        padding-top: 60px; /* 上のパディングを調整 */
     }
 
     .footer-content {
